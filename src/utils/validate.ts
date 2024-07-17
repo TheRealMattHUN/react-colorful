@@ -11,3 +11,17 @@ export const validHex = (value: string, alpha?: boolean): boolean => {
     (!!alpha && length === 8) // '#rrggbbaa' format
   );
 };
+
+const rgbaMatcher = /(^[0-9]*$)/gi;
+
+export const validRGB = (value: string): boolean => {
+  const match = rgbaMatcher.exec(value);
+  const converted = +value;
+  return -1 < converted && converted < 256;
+};
+
+export const validAlpha = (value: string): boolean => {
+  const match = rgbaMatcher.exec(value);
+  const converted = +value;
+  return -1 < converted && converted < 100;
+};

@@ -5,9 +5,14 @@
     "esModuleInterop": true,
     "jsx": "react",
     "jsxFactory": "React.createElement",
+    "jsxFragmentFactory": "React.Fragment",
     "moduleResolution": "node",
     "declaration": true,
+    "declarationMap": true,
+    "composite": true,
+    "rootDir": "./src",
+    "outDir": "./dist",
     "strict": true
   },
-  "include": ["./src/**/*", "./test/**/*", "./demo/src/**/*"]
+  "include": ["./src/**/*"]
 }
